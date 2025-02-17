@@ -22,7 +22,7 @@
     "url": "https://github.com/Borewit/rate-limit/issues"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.10",
+    "@types/chai": "^5.0.1",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10.0.4",
     "@types/node": "^22.5.0",
