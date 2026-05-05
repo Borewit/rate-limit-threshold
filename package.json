@@ -22,6 +22,7 @@
     "url": "https://github.com/Borewit/rate-limit/issues"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.14",
     "@types/chai": "^4.3.10",
     "@types/debug": "^4.1.12",
     "@types/mocha": "^10.0.4",
@@ -47,7 +48,9 @@
     "build": "yarn run clean && npm run compile",
     "start": "yran yarn compile ** yarn run lint cover-test",
     "test-coverage": "c8 npm run test",
-    "send-codacy": "c8 report --reporter=text-lcov | codacy-coverage"
+    "send-codacy": "c8 report --reporter=text-lcov | codacy-coverage",
+    "lint:fix": "biome check --write",
+    "update-biome": "yarn add -D --exact @biomejs/biome && npx @biomejs/biome migrate --write && npm run lint:fix"
   },
   "keywords": [
     "ratelimiter",
@@ -60,8 +63,5 @@
     "restrict",
     "API"
   ],
-  "dependencies": {
-    "@biomejs/biome": "^1.8.3"
-  },
   "packageManager": "yarn@4.6.0"
 }

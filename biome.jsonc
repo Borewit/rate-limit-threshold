@@ -1,32 +1,20 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-	"organizeImports": {
-		"enabled": false
-	},
+	"$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
+	"assist": { "actions": { "source": { "organizeImports": "off" } } },
 	"formatter": {
 		"enabled": false
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-            "correctness": {
-              "noConstantCondition": "warn",
-              "noUnusedImports": "error",
-              "noNodejsModules": "error"
-            },
-            "style": {
-              "noParameterAssign": "off",
-              "useConst": "error"
-            },
-			"recommended": true,
-			"complexity": {
-				"noForEach": "off"
+			"correctness": {
+				"noConstantCondition": "warn",
+				"noUnusedImports": "error",
+				"noNodejsModules": "error"
 			},
-			"suspicious": {
-				"noEmptyBlockStatements": "error",
-				"noExplicitAny": "off" // ToDo
-			},
-			"nursery": {
+			"style": {
+				"noParameterAssign": "off",
+				"useConst": "error",
 				"noRestrictedImports": {
 					"level": "error",
 					"options": {
@@ -37,22 +25,44 @@
 				},
 				"useConsistentBuiltinInstantiation": "error",
 				"useThrowNewError": "error",
-				"useThrowOnlyError": "error",
+				"useThrowOnlyError": "error"
+			},
+			"recommended": true,
+			"complexity": {
+				"noForEach": "off"
+			},
+			"suspicious": {
+				"noEmptyBlockStatements": "error",
+				"noExplicitAny": "off", // ToDo
 				"useErrorMessage": "error"
-			}
+			},
+			"nursery": {}
 		}
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"ignore": [
-			"./.pnp.*",
-			"./coverage",
-			"./yarn",
-			"./.pnp.*",
-			"./lib/**/*.d.ts",
-			"./lib/**/*.js",
-			"./test/**/*.d.ts",
-			"./test/**/*.js"
+		"includes": [
+			"**",
+			"!.pnp.*",
+			"!coverage",
+			"!yarn",
+			"!.pnp.*",
+			"!lib/**/*.d.ts",
+			"!lib/**/*.js",
+			"!test/**/*.d.ts",
+			"!test/**/*.js"
 		]
-	}
+	},
+	"overrides": [
+		{
+			"includes": ["test/**/*"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noNodejsModules": "off"
+					}
+				}
+			}
+		}
+	]
 }
