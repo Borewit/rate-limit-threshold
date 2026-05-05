@@ -1,6 +1,6 @@
 {
   "name": "rate-limit-threshold",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Rate limiter with a maximum number of calls per given period of time",
   "type": "module",
   "exports": "./lib/index.js",
