@@ -1,6 +1,5 @@
 import {RateLimitThreshold} from '../lib/index.js';
 import {assert} from 'chai';
-// biome-ignore lint/correctness/noNodejsModules:
 import {performance} from 'node:perf_hooks';
 
 describe('RateLimitThreshold', function () {

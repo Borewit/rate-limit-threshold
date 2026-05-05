@@ -20,7 +20,7 @@ export class RateLimitThreshold {
    * @return Resolved when timeout completed comply with rate limit threshold
    */
   public async limit(): Promise<number> {
-    const now = new Date().getTime();
+    const now = Date.now();
     const t0 = now - (this.period);
     while (this.queue.length > 0 && this.queue[0] < t0) {
       this.queue.shift();
@@ -31,7 +31,7 @@ export class RateLimitThreshold {
       delay = this.queue[0] + this.period - now;
       await RateLimitThreshold.sleep(delay);
     }
-    this.queue.push(new Date().getTime());
+    this.queue.push(Date.now());
     return delay;
   }
 
