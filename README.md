@@ -1,5 +1,4 @@
 [![Node.js CI](https://github.com/Borewit/rate-limit-threshold/actions/workflows/nodejs-ci.yml/badge.svg)](https://github.com/Borewit/rate-limit-threshold/actions/workflows/nodejs-ci.yml)
-[![CodeQL](https://github.com/Borewit/rate-limit-threshold/actions/workflows/codeql.yml/badge.svg)](https://github.com/Borewit/rate-limit-threshold/actions/workflows/codeql.yml)
 [![NPM version](https://img.shields.io/npm/v/rate-limit-threshold.svg)](https://npmjs.org/package/rate-limit-threshold)
 [![npm downloads](http://img.shields.io/npm/dm/rate-limit-threshold.svg)](https://npmcharts.com/compare/rate-limit-threshold?interval=30&start=365)
 [![Coverage Status](https://coveralls.io/repos/github/Borewit/rate-limit-threshold/badge.svg?branch=main)](https://coveralls.io/github/Borewit/rate-limit-threshold?branch=main)
