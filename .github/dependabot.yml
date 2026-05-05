@@ -17,3 +17,9 @@ updates:
         dependency-type: "development"
         patterns:
           - "@types/*"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    labels:
+      - DevOps
