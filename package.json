@@ -44,7 +44,7 @@
     "lint-ts": "biome check",
     "lint-md": "remark -u preset-lint-recommended .",
     "lint": "yarn run lint-md && yarn run lint-ts",
-    "test": "TS_NODE_PROJECT=test/tsconfig.json mocha",
+    "test": "mocha",
     "build": "yarn run clean && npm run compile",
     "prepublishOnly": "yarn run build",
     "start": "yran yarn compile ** yarn run lint cover-test",

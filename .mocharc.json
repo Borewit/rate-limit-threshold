@@ -3,5 +3,8 @@
   "watch-files": ["lib/**/*.ts", "test/**/*.ts"],
   "spec": ["test/test-*.ts"],
   "loader": ["ts-node/esm"],
-  "extensions": ["ts", "tsx"]
+  "extensions": ["ts", "tsx"],
+  "node-option": [
+    "env=TS_NODE_PROJECT=test/tsconfig.json"
+  ]
 }
